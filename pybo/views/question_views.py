@@ -19,7 +19,7 @@ def _list():
     question_list = question_list.paginate(page=page, per_page=10)
     return render_template('question/question_list.html', question_list=question_list)
 
-@bp.route('/detail/<int:question_id>/')ㅇ
+@bp.route('/detail/<int:question_id>/')
 def detail(question_id):
     form = AnswerForm()
     question = Question.query.get_or_404(question_id)
